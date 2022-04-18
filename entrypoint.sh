@@ -41,6 +41,8 @@ for b in "${branch[@]}"; do
 done
 echo "pre_release = $pre_release"
 
+git config --global --add safe.directory /github/workspace
+
 # fetch tags
 git fetch --tags
 
