@@ -14,6 +14,9 @@ tag_context=${TAG_CONTEXT:-repo}
 suffix=${PRERELEASE_SUFFIX:-beta}
 verbose=${VERBOSE:-true}
 
+# fix for fatal: unsafe repository ('/github/workspace')
+git config --global --add safe.directory /github/workspaces
+
 cd ${GITHUB_WORKSPACE}/${source}
 
 echo "*** CONFIGURATION ***"
@@ -40,9 +43,6 @@ for b in "${branch[@]}"; do
     fi
 done
 echo "pre_release = $pre_release"
-
-# fix for fatal: unsafe repository ('/github/workspace')
-git config --global --add safe.directory /github/workspace
 
 # fetch tags
 git fetch --tags
