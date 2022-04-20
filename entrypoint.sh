@@ -15,7 +15,7 @@ suffix=${PRERELEASE_SUFFIX:-beta}
 verbose=${VERBOSE:-true}
 
 # fix for fatal: unsafe repository ('/github/workspace')
-git config --global --add safe.directory /github/workspaces
+git config --global --add safe.directory /github/workspace
 
 cd ${GITHUB_WORKSPACE}/${source}
 
