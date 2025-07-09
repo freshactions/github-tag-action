@@ -1,4 +1,4 @@
-FROM alpine
+FROM public.ecr.aws/i1i0w6p5/alpine:latest
 LABEL "repository"="https://github.com/anothrNick/github-tag-action"
 LABEL "homepage"="https://github.com/anothrNick/github-tag-action"
 LABEL "maintainer"="Nick Sjostrom"
